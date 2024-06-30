@@ -17,7 +17,7 @@ def register_user(request):
 
 @api_view(["POST"])
 def login(request):
-    serializer = LoginSerializer(request.data)
+    serializer = LoginSerializer(data=request.data)
     if serializer.is_valid():
         token = JWTAuthentication.generate_token(payload=serializer.data)
         return Response(
@@ -26,6 +26,6 @@ def login(request):
                 "token": token,
                 "user": serializer.data,
             },
-            status=status.HTTP_201_CREATED
+            status=status.HTTP_201_CREATED,
         )
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
