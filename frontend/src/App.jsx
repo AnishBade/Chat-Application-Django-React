@@ -9,22 +9,24 @@ import './App.css'
 
 export default function App() {
   return (
-    <>
-      <div className='chat-container'>
-        <Sidebar />
-        <ChatArea />
-      </div>
+    // <>
+    //   <div className='chat-container'>
+    //     <Sidebar />
+    //     <ChatArea />
+    //   </div>
 
-    </>
+    // </>
 
-    // <Router>
-    //   <Routes>
-    //     <Route path='/' element={<Navigate />}/>
-    //     <Route path='/login' element={<Login />}></Route>
-    //     <Route path='/register' element={<Register />}></Route>
-    //   </Routes>
+    <Router>
+      <Navigate/>
+      <Routes>
+        <Route path='/' element={<Navigate />}/>
+        <Route path='/login' element={<Login />}></Route>
+        <Route path='/register' element={<Register />}></Route>
+        <Route path='/chat' element={<><Sidebar/><ChatArea/></> }></Route>
+      </Routes>
 
-    // </Router>
+    </Router>
 
   );
 }

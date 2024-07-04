@@ -1,8 +1,8 @@
-import React from 'react'
 import Message from './Message'
 import MessageInput from './MessageInput'
+import withAuthentication from '../utils/withAuthenticatiion'
 
-export default function ChatArea() {
+function ChatArea() {
     return (
         <div className='chat-area'>
             <div className='chat-header'></div>
@@ -14,3 +14,7 @@ export default function ChatArea() {
         </div>
     )
 }
+
+
+export default withAuthentication(ChatArea)
+// export default ChatArea
