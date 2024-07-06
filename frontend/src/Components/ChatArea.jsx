@@ -10,6 +10,8 @@ function ChatArea() {
                 <Message text="Hey, how's it going" sent />
                 <Message text="I am good" received />
             </div>
+
+
             
             <MessageInput />
         </div>
