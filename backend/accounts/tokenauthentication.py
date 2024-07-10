@@ -9,9 +9,13 @@ from datetime import datetime, timedelta
 User = get_user_model()
 
 
-class JWTAuthentication(BaseAuthentication):
+class JWTAuthentication(
+    BaseAuthentication
+):  # This overwrites rest_framework_simplejwt.authentication.JWTAuthentication
 
-    def authenticate(self, request):
+    def authenticate(
+        self, request
+    ):  # This is the main and only overwritten function from rest_framework_simplejwt.authentication.JWTAuthentication
         token = self.extract_token(request=request)
         if token is None:
             return None
