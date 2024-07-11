@@ -1,7 +1,8 @@
 import Message from './Message'
 import MessageInput from './MessageInput'
-import withAuthentication from '../utils/withAuthenticatiion'
+import WithAuthentication from '../utils/withAuthenticatiion'
 
+// eslint-disable-next-line react-refresh/only-export-components
 function ChatArea() {
     return (
         <div className='chat-area'>
@@ -12,12 +13,13 @@ function ChatArea() {
             </div>
 
 
-            
+
             <MessageInput />
         </div>
     )
 }
 
 
-export default withAuthentication(ChatArea)
-// export default ChatArea
+// eslint-disable-next-line react-refresh/only-export-components
+// export default WithAuthentication(ChatArea)
+export default ChatArea

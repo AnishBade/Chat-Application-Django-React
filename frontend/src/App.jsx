@@ -18,12 +18,11 @@ export default function App() {
     // </>
 
     <Router>
-      <Navigate/>
       <Routes>
-        <Route path='/' element={<Navigate />}/>
+        {/* <Route path='/' element={<Navigate />}/> */}
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
-        <Route path='/chat' element={<><Sidebar/><ChatArea/></> }></Route>
+        <Route path='/chat' element={<><Sidebar /><ChatArea /></>}></Route>
       </Routes>
 
     </Router>
